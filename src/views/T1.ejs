@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, user-scalable=no,inicial-scale=1.0,maxium-scale=1.0, minium-scale=1.0"/>
+    <link rel="shortcut icon" type="image/x-icon"href="color-amarillo.png" />
+    <meta name="Autor:" content="Play carri software by Bryan Carrillo" />
+    <meta name="Tarup" content="Mejor forma de organizar tus tareas escolares" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <%- include ('partials/headT1') -%>
+    <title>Tarup</title>
+ 
+</head>
+  <body class="1nth3Castl3">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+<header> 
+      <nav class="navbar navbar-dark py-0 bg-red navbar-expand-lg py-md-0" style="background-color: #800e19; height: 58px;">
+        <img class="navbar-brand" src="castle3.png" href="#" style="margin-left:111px; width: 65px; height: 60px;"></>
+        <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               
+            </ul>
+        </div>
+   
+   
+       </nav>
+    <div class="container-fluid py-3">
+        <div class="row">
+          
+            <div class="col"></div>
+        </div>
+    </div>
+  
+         
+
+</header> 
+     <div id="app">
+      <aside id="control" style="margin-left: 682px;margin-right: 47px;">
+        <div id="perfil" style="margin-left: 31px; margin-right: 8px;"> 
+         <button id="botonMper" type="button" onclick="document.getElementById('oculto1').style.display='block'; document.getElementById('botonMper').style.display='none'; document.getElementById('botonOper').style.display='inline';"  class="btn btn-secondary btn-lg" style="
+           background-color:  #abb2b9 ;
+           font-family: 'Balsamiq Sans', cursive; 
+           margin-left:-2px;
+           display: inline; ">Mi perfil</button>
+           <button id="botonOper" type="button" onclick="document.getElementById('oculto1').style.display='none'; document.getElementById('botonOper').style.display='none';document.getElementById('botonMper').style.display='inline'; "  class="btn btn-secondary btn-lg" 
+           style="
+           background-color:  #abb2b9 ;
+           font-family: 'Balsamiq Sans', cursive; 
+           margin-left:-2px; 
+            display: none;">Mi perfil</button>
+          <div id="oculto1" style=" width: 266px; height: 256px; background-color: rgb(214, 206, 202); margin-left: -35px; margin-right: 71px; display: none;">
+
+      <p><strong>id</strong>: <%= user._id %> <br>
+        <strong>email</strong>: <%= user.local.email %> <br>
+         </p>
+            </div>
+        
+         
+       </div>
+         <button type="button" id="botonMgru" onClick="document.getElementById('oculto2').style.display='block'; document.getElementById('botonMgru').style.display='none'; document.getElementById('botonOgru').style.display='inline';" class="btn btn-success btn-lg" 
+         style="background-color:  #abb2b9 ;
+         font-family: 'Balsamiq Sans', cursive; 
+         margin-left:29px;
+         display: inline;
+         ">Mis grupos</button>
+         <button type="button" id="botonOgru" onClick="document.getElementById('oculto2').style.display='none'; document.getElementById('botonOgru').style.display='none';document.getElementById('botonMgru').style.display='inline'; " class="btn btn-success btn-lg" 
+         style=" background-color:  #abb2b9 ;
+         font-family: 'Balsamiq Sans', cursive; 
+         margin-left:29px; 
+          display: none;
+         ">Mis grupos</button>
+         <div id="oculto2" style=" width: 266px; height: 256px; background-color: rgb(214, 206, 202); margin-left: -3px; margin-right: 71px; display: none;"></div>
+         <button type="submit" onClick="location.href='/logout';"  class="btn btn-secondary btn-lg" style="font-family: 'Balsamiq Sans', cursive; margin-top:8px; margin-left:29px;">cerrar sesion</button>
+ 
+       
+   </aside>
+     <div id="TAU1"> 
+        <h5 style="margin-top:24px; margin-left:154px; font-size: 1.80rem;;">¡Bienvenido a Tarup!</h5>
+        <button id="x" type="button" onClick="iniciarCurso()" class="btn btn-success" style="margin-left: 225px;margin-top: 63px; height: 55px ; width:148px ;padding-top: 0.1rem;">Iniciar curso</button>
+      
+      
+      <script>
+      function iniciarCurso(){
+        const curso=document.getElementById('TAU1');
+      curso.classList.toggle('TAC2'); 
+      let CURSO=`<div  class="TAC2" id="TAC2"><h5 style="margin-top:24px; margin-left:153px; font-size: 1.5rem;;">Selecciona el tipo de curso</h5>
+        <button id="x" onClick="registraBimestre()"; type="button" class="btn btn-success" style="margin-left: 225px;margin-top: 63px; height: 55px ; width:148px ;padding-top: 0.1rem;">Bimestre</button>
+        <button id="x" onClick="registraQuatrimestre()"; type="button" class="btn btn-success" style="margin-left: 225px;margin-top: 63px; height: 55px ; width:148px ;padding-top: 0.1rem;">Quatrimestre</button>
+        <button id="x" onClick="registraSemestre()"; type="button" class="btn btn-success" style="margin-left: 225px;margin-top: 63px; height: 55px ; width:148px ;padding-top: 0.1rem;">Semestre</button>
+        <button id="x" onClick="registraDiasdecurso()"; type="button" class="btn btn-success" style="margin-left: 225px;margin-top: 63px; height: 55px ; width:148px ; padding-top: 0.1rem;">Dias de curso</button>`;
+      verCursos(CURSO)
+      }
+      const verCursos=(ok)=>document.getElementById('TAU1').innerHTML=ok;
+    
+        function registraBimestre() {
+     const cambiatoB= document.getElementById('TAU1');
+     cambiatoB.classList.toggle('bimestre');
+    
+  let B =`  <div id="formulario1"> 
+      
+      <div id="bimestre"><h5 style="margin-top:0px; margin-left:58px; font-size: 1.5rem;;">Bimestre</h5>
+      <form action="bimestre.php" method="POST" style="margin-left: 201px;margin-top: 6px;">
+          <ul><p>Carrera</p>
+              <input name="carrera" id="carrera" type="text"></input>
+              <p>Escuela</p>
+              <input name="escuela" id=" escuela" type="text"></input>
+              <p>Grupo</p>
+              <input name="grupo" id="grupo" type="text"></input>
+              <p>Grado</p><input name="grado"  id="grado" type="text">
+          <br><button type="submit" class="btn btn-success" style="width: 150px;height: 60px; margin-top: 22px;">Crear curso</button><button type="button" onCLick="iniciarCurso()" class="btn btn-danger" style="margin-left: -328px;margin-top: 48px;">regresar</button></ul> </form>
+              
+      </div>
+    </div>`;
+    muestraFB(B);
+} 
+const muestraFB=(clienteB)=>document.getElementById('TAU1').innerHTML=clienteB;
+
+function registraSemestre() {
+     const cambiatoS= document.getElementById('TAU1');
+     cambiatoS.classList.toggle('semestre');
+
+   let S =`  <div id="formulario1"> 
+      
+      <div id=""><h5 style="margin-top:0px; margin-left:58px; font-size: 1.5rem;;">Semestre</h5>
+      <form action="" style="margin-left: 201px;margin-top: 6px;">
+          <ul><p>Carrera</p>
+              <input name="carrera" type="text"></input>
+              <p>Escuela</p>
+              <input name="escuela" type="text"></input>
+              <p>Grupo</p>
+              <input name="grupo" type="text"></input>
+              <p>Grado</p><input name="grado" type="text">
+              
+          <br><submit type="button" class="btn btn-success" style="width: 150px;height: 60px; margin-top: 22px;">Crear curso</submit><submit type="button" onCLick="iniciarCurso()" class="btn btn-danger" style="margin-left: -328px;margin-top: 48px;">regresar</submit></input></ul> </form>
+              
+      </div>
+    </div>`;
+    muestraFS(S);
+}
+const muestraFS=(clienteS)=>document.getElementById('TAU1').innerHTML=clienteS;
+
+
+function registraQuatrimestre() {
+     const cambiatoQ= document.getElementById('TAU1');
+     cambiatoQ.classList.toggle('quatrimestre');
+
+   let Q  =`  <div id="formulario1"> 
+      
+      <div id=""><h5 style="margin-top:0px; margin-left:58px; font-size: 1.5rem;;">Quatrimestre</h5>
+      <form action="" style="margin-left: 201px;margin-top: 6px;">
+          <ul><p>Carrera</p>
+              <input type="text"></input>
+              <p>Escuela</p>
+              <input type="text"></input>
+              <p>Grupo</p>
+              <input type="text"></input>
+              <p>Grado</p>
+              <input type="text"></input>
+          <br><submit type="button" class="btn btn-success" style="width: 150px;height: 60px; margin-top: 22px;">Crear curso</submit><submit type="button" onCLick="iniciarCurso()" class="btn btn-danger"style="margin-left: -328px;margin-top: 48px;">regresar</submit></input></ul> </form>
+              
+      </div>
+    </div>`;
+    muestraFQ(Q);
+}
+const muestraFQ=(clienteQ)=>document.getElementById('TAU1').innerHTML=clienteQ;
+
+function registraDiasdecurso() {
+     const cambiatoD= document.getElementById('TAU1');
+     cambiatoD.classList.toggle('diasdecurso');
+
+let D=`  <div class="formulario1" id="formulario1"> 
+      
+      <div id=""><h5 style="margin-top:0px; margin-left:58px; font-size: 1.5rem;;">Dias de curso</h5>
+      <form action="" style="margin-left: 201px;margin-top: 6px;">
+          <ul><p>Curso</p>
+              <input type="text"></input>
+              <p>Dias de curso</p>
+              <input type="text"></input>
+              <p>Escuela </p>
+              <input type="text"></input>
+              <p>Grupo (opcional)</p><input type="text">
+              
+          <br><submit type="button" class="btn btn-success" style="width: 150px;height: 60px; margin-top: 22px;">Crear curso</submit> <submit type="button" onClick="iniciarCurso()" class="btn btn-danger" style="margin-left: -328px;margin-top: 48px;">regresar</submit></input></ul> </form>
+              
+      </div>
+    </div>`;
+    muestraFD(D);
+}
+const muestraFD=(clienteD)=>document.getElementById('TAU1').innerHTML=clienteD;
+
+
+function regresa(){
+  const eligeCurso=document.getElementById('formualrio1');
+  eligeCurso.getElementById('TAC2').toggle('TAC2');
+}
+      </script>  
+               </div>
+               <div id="morado" style="margin-top: -686px; margin-left:976px; display:flex;"> </div>
+               <button type="image"  class="btn btn-danger btn-lg" style="width: 68px; height:68px;margin-left: 977px;margin-top: 14px; background-color: #e71d1d;"></button>
+               <img src="engran2.png" style="width: 58px; height: 58px;margin-left: 982px;margin-top: -99px;"/>
+      </div>
+  </div> 
+  
+ 
+    
+  </body>
+</html>

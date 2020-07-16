@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, user-scalable=no,inicial-scale=1.0,maxium-scale=1.0, minium-scale=1.0"/>
+<link rel="shortcut icon" type="image/x-icon"href="color-amarillo.png" />
+<meta name="Autor:" content="Play carri software by Bryan Carrillo" />
+<meta name="Tarup" content="Mejor forma de organizar tus tareas escolares" />
+<meta
+name="description"
+content="Web site created using create-react-app"
+/>
+
+<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+<!--
+manifest.json provides metadata used when your web app is installed on a
+user's mobile device or desktop. See https://developers.google.com/…/fundament…/web-app-manifest/
+-->
+<%- include ('partials/headIndex') -%>
+<title>Tarup</title>
+
+</head>
+<body class="BwtoT4a3R2u1P">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+
+<div id=i_0_w class="clearfix">
+
+<header>
+
+<h1>Tarup</h1>
+<button type="button" class="btn btn-success" onclick="accesa()" style="margin-top: -49px;margin-left: 12px;margin-right: 53px;">iniciar sesión</button>
+<img src="mainlogo.png" onclick="location.href='/';" style= "width:76px; height:52px;margin-top: -93px;margin-left: 13px;";>
+
+</header>
+
+<aside>
+<div class="login" style="margin-left: 3px;margin-top: 2px;"> <b><h5 style="margin-left: 137px; margin-top:47px;">Inicia sesion</h5></b>
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger">
+          <%= message %>
+        </div>
+      <% } %> 
+<form  method="POST" action="/login" onsubmit="validarDatosLogin()" style="margin-left:120px ;"><ul>
+<p>Correo</p>
+<input name="email" id="correo1" type="email" required> </input>
+<p>Contraseña</p>
+<input name="password" id="pass1" type="password" required> </input>
+<button type="submit" onClick="goGP()" class="btn btn-success" style="margin-bottom:-66px ;margin-top: 63px;margin-left: 41px;margin-right: 193px;" >Entra</button>
+<button type="button" onClick="location.href='/signup';" class="btn btn-primary" style=" margin-top: 76px; margin-left: 47px; margin-right: 218px; width: 100px; height:40px;" >Registrate</button>
+
+
+</ul></form>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<div/>
+
+
+<!-- <div class="start1" id="menu_i">
+<button type="button" class="btn btn-secondary" onclick="">¿Qué es tarup?</button>
+<button type="button" class="btn btn-secondary" onclick="">Mision</button>
+<button type="button" class="btn btn-secondary" onclick="">Vision</button>
+</div>-->
+
+<script>
+
+</script>
+
+</aside>
+
+<section id="imagwel">
+    <img id=new src="7.jpg"; style="width: 668px; height: 331px;">
+    <p id=efem><br> <b>Efemeride del dia:</b> 10 de julio pero del año 1519.— Hernan cortes notifica al rey Carlos V de España, haber construido el ayuntamiento de la villa Rica de la Vera Cruz.</p>
+</section>
+<article></article>
+</section>
+</div>
+<footer>
+
+
+<h5>Tarup, servicio dedicado a alumnos de cualquier nivel.</h5>
+<h6> Nicolas romero, México, México</h6>
+<h6>Proximamente
+Llamada en youtube compartiendo la emocion del video.
+</h6>
+
+<h6>www.Tarup.com</h6>
+</footer>
+
+
+</body>
+</html>

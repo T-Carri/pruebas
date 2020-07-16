@@ -1,0 +1,149 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: antiquewhite;
+    display: block;
+}
+
+#i_0_w{
+    width:1100px;
+    margin:0px auto;
+	height:795px;
+    /*border: 1px solid black;*/
+    
+
+}
+header{
+    background-color: rgb(248, 245, 235);
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+	
+    
+}
+
+aside{
+    float: left;
+    width: 40%;
+    height: 695px;
+    background-color:rgb(192, 185, 176);
+}
+
+#imagwel{
+    float: right;
+    width: 60%;
+    height: 695px;
+    background-color: rgb(238, 242, 245);
+}
+
+footer{
+    width: 100%;
+    height: 100vh;
+    background-color: gold;
+    text-align: center;
+    /*float: inline-end;*/
+}
+button.btn.btn-secondary{ 
+    margin: 78px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 19px;
+    background-color: blueviolet;
+    font-family: 'Cairo', sans-serif;
+
+}
+button.btn.btn-danger{margin: 78px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 19px;
+    background-color: rgb(252, 22, 22);
+    font-family: 'Cairo', sans-serif;
+}
+    button.btn.btn-warning{margin: 78px;
+        padding-left: 30px;
+        padding-top: 15px;
+        padding-right: 30px;
+        padding-bottom: 19px;
+        /*background-color: rgb(216, 20, 13);*/
+        font-family: 'Cairo', sans-serif;
+    }    
+button.btn.btn-success{ 
+    margin: -35px;
+    float: right;
+    border-left-width: 1px;
+    margin-right: 29px;
+    margin-top: -72px;
+    
+    
+
+}
+.h2, h2{
+    padding-left: 60px;
+    padding-top: 75px;
+    padding-right: 2px;
+    padding-bottom: -26px;
+	font-family: 'Pangolin', cursive;
+}
+.clearfix{
+    clear: both;
+
+}
+.h1,h1{font-size: 2.5em;
+       padding-left:110px; 
+	   padding-top:22px;
+	   font-family: 'Cairo', sans-serif;
+font-family: 'Patua One', cursive;
+}
+	   
+img{margin-top:-133px;
+	padding-left:42px;}
+	
+	#new{
+		margin-top: 80px;
+		margin-left: -22px;
+		
+	}
+	p{margin-top: 27px;
+margin-bottom: 1rem;
+margin-left:3px}
+
+/*  @media screen and (max-device-width: 480px){
+ .column { float:none;}   
+}*/
+.menuinfo{float: left;
+    width: 100%;
+    height: 695px;
+    background-color:rgb(192, 185, 176);
+
+}
+div.informacion{
+    padding: em;
+}
+div.informacionT{
+    margin-top: 40px;
+    margin-left: 15px;
+}
+.menuinfoT{float: left;
+    width: 100%;
+    height: 695px;
+    background-color:rgb(240, 232, 223);
+
+}
+button.btn.btn-primary{
+    width:150px;
+    height: 68px;
+    margin-left: -70px;
+
+
+}
+.login{float: left;
+    width: 100%;
+    height: 695px;
+    background-color:rgb(192, 185, 176);
+
+}

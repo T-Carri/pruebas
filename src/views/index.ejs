@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> 
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, user-scalable=no,inicial-scale=1.0,maxium-scale=1.0, minium-scale=1.0"/>
+    <link rel="shortcut icon" type="image/x-icon"href="color-amarillo.png" />
+    <meta name="Autor:" content="Play carri software by Bryan Carrillo" />
+    <meta name="Tarup" content="Mejor forma de organizar tus tareas escolares" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app" />
+      <%- include ('partials/headIndex') -%>
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
+   <title>Tarup</title>
+ 
+  </head>
+  <body class="BwtoT4a3R2u1P">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+
+<div id=i_0_w class="clearfix">
+  
+  <header>
+  
+  <h1>Tarup</h1>
+    <button  type="button"  class="btn btn-success" onclick="accesa()" style="margin-top: -49px;margin-left: 12px;margin-right: 53px;">iniciar sesión</button>
+  <img src="mainlogo.png"  style= "width:76px; height:52px;margin-top: -93px;margin-left: 13px;";>
+
+</header>  
+  
+  <aside> 
+    <div id="ehm"><h2>El motor de tarup es el tiempo y las fechas, ¡las tareas jamás serán olvidadas!</h2>
+      <button  type="button" class="btn btn-secondary" onclick="enseña()">Empieza hoy mismo</button></div> 
+ 
+ 
+ 
+      <!-- <div class="start1" id="menu_i">
+    <button  type="button" class="btn btn-secondary" onclick="">¿Qué es tarup?</button>
+    <button  type="button" class="btn btn-secondary" onclick="">Mision</button> 
+    <button  type="button" class="btn btn-secondary" onclick="">Vision</button>
+  </div>-->
+     
+  <script> 
+  
+   function enseña(){
+     
+    const cambia= document.getElementById("ehm");
+    cambia.classList.toggle('menuinfo');
+    let html=`<div class="informacion">
+    <button  type="button" class="btn btn-secondary" onclick="whatisTarup()">¿Qué es tarup?</button>
+    <button  type="button" class="btn btn-danger" onclick="mision()">Misión</button> 
+    <button  type="button" class="btn btn-warning" onclick="vision()">Visión</button>
+  </div>`;
+    muestraresultado(html);
+    
+  }
+  const muestraresultado=(botones)=>document.getElementById('ehm').innerHTML=botones;
+
+ function whatisTarup(){const showmewhaTis=document.getElementById("ehm");
+showmewhaTis.classList.toggle('menuinfoT');
+  let T=`<div class="informacionT"><h5>Tarup es una herramienta que te ayuda a organizar tus tareas y llevar un control sobre tus materias. </h5><br><h5>Tambien te notifica tu estado de riesgo, pendientes y rubricas.<h5/>
+<br><h5>Su utilidad es similar a un lapiz, incluyenos en tu lista de útiles.</h5>
+    <button  type="button" class="btn btn-danger" onclick="enseña()">Tarup</button> 
+    <button  type="button" class="btn btn-primary" onclick="registra()">Registrate</button> </div>`;          
+  muestra(T);
+                                              }
+ 
+ const muestra=(tarupInfo)=>document.getElementById('ehm').innerHTML=tarupInfo;
+ 
+ 
+ 
+ 
+ 
+ 
+  function mision(){const mision=document.getElementById('ehm');
+mision.classList. toggle('menuinfoT');
+let A=`<div>  <b><h5>Misión</h5></b>
+  <h5>Un servicio web dedicado a la sincronización de tareas, organiza y ordena de tus deberes escolares, dirigida a los alumnos de cualquier nivel. Tarup la mejor forma de ecapturar,
+agendar y organizar tus proyectos o tareas los cuales podrás ver en la nube y compartir a tus compañeros,
+también podrás ver estadísticas de materias donde hay debilidades.</h5><h5>Jamás fue tan divertido ir a la escuela.</h5> <h5>Tarup tiene como mision mejorar la productividad académica.</h5>
+  <button  type="button" class="btn btn-danger" onclick="enseña()">Back</button> </div>`;
+       objetivos(A) }
+       const objetivos=(star)=>document.getElementById('ehm').innerHTML=star;
+
+
+       function vision(){const vision=document.getElementById('ehm');
+vision.classList. toggle('menuinfoT');
+let R =`<div>  <b><h5>Vision</h5></b>
+  <h5>Este metodo de trabajo esta diseñado con la intención de mejorar las notas escolares.</h5> 
+  <h5>Lo cual unicamente es posible con disciplina, pero tarup lo vuelve más fácil organizando tu materias mejorando tu productividad tambien contemplamos a los distraidos...</h5>
+  <button  type="button" class="btn btn-danger" onclick="enseña()">Back</button> </div>`;
+       muestraVision(R)}
+       const muestraVision=(beNice)=>document.getElementById('ehm').innerHTML=beNice;
+
+   function accesa(){
+     const entra=document.getElementById('ehm');
+   entra.classList.toggle('login');
+   let U=`<div style="margin-left: 137px;margin-top: 57px;">  <b><h5>Inicia sesion</h5></b>
+        <form  method="POST" action="/login" ><ul>
+      <p>Correo</p>
+      <input name="email" id="correo1" type="email" required> </input>
+      <p>Contraseña</p>
+      <input name="password" id="pass1" type="password" required> </input>
+      <button  type="submit"  onClick="goGP()" class="btn btn-success" style="margin-bottom:-66px ;margin-top: 63px;margin-left: 41px;margin-right: 193px;" >Entra</button>
+      <button  type="button" onClick="registra()" class="btn btn-primary" style=" margin-top: 76px; margin-left: 35px; margin-right: 193px; width: 90px; height:40px;" >Registrate</button>
+     
+      </ul></form>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div/>`;
+    trabajaAcceso(U);
+    }
+const trabajaAcceso=(ventanA)=>document.getElementById('ehm').innerHTML=ventanA;
+function validarDatosLogin(){
+       var correo, contraseña;
+       correo=document.getElementById("correo1").value;
+       contraseña=document.getElementById("pass1").value;
+       if(correo===""||contraseña===""){
+              alert("Agrega correo y contraseña");
+              return false;
+       }
+}
+function registra(){
+  const agrega=document.getElementById('ehm');
+   agrega.classList.toggle('login');
+   let P=`<div style="margin-left: 137px;margin-top: 57px;">  <b><h5>Registrate</h5></b>
+   
+    <form method="POST" action="/signup"><ul>
+    
+      <p>Correo</p>
+      <input name="email" id="correo" type="email" required> </input>
+      <p>Contraseña</p>
+      <input name="password" id="pass" type="password" required> </input>
+      <button  type="submit"  onClick="enviar()" class="btn btn-success" style="margin-bottom:-66px ;margin-top: 63px;margin-left: 41px;margin-right: 193px;" >Iniciar</button>
+       </ul></form>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div/>`;
+trabajaRegistro(P);
+    
+}
+const trabajaRegistro=(registro)=>document.getElementById('ehm').innerHTML=registro;
+
+function validaRegistro(){var nomuser,correo, password, passwordRectifica;
+nomuser=document.getElementById("nombreUsuario").value;
+correo=document.getElementById("correo").value;
+password=document.getElementById("pass").value;
+passwordRectifica=document.getElementById("passR").value;
+
+
+if(nomuser===""||correo===""||password===""||passwordRectifica===""){
+              alert("Completa la informacion de registro");
+              return false;}
+function comprobarClave(){
+   let clave1 = document.f1.clave1.value;
+   let clave2 = document.f1.clave2.value;
+
+    if (clave1 == clave2){  alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo");
+  }else{alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo");}
+       
+     
+} 
+}
+
+
+
+
+
+</script>
+
+  </aside>
+  
+  
+  
+  <section id="imagwel">
+    <img id=new src="7.jpg"; style="width: 668px; height: 331px;">
+    <p id=efem><br> <b>Efemeride del dia:</b> 10 de julio pero del año 1519.— Hernan cortes notifica al rey Carlos V de España, haber construido el ayuntamiento de la villa Rica de la Vera Cruz.</p></section>
+    <article></article>
+  </section>
+  </div>
+<footer>
+
+ 
+  <h5>Tarup, servicio dedicado a alumnos de cualquier nivel.</h5>
+  <h6> Nicolas romero, México, México</h6>
+  <h6>Proximamente
+    Llamada en youtube compartiendo la emocion del video.
+  </h6>
+  
+  <h6>www.Tarup.com</h6>
+</footer>
+
+
+
+
+
+
+    
+  </body>
+</html>
